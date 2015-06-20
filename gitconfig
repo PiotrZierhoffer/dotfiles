@@ -1,0 +1,25 @@
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  graph = log --graph --decorate --pretty=format:\"%C(red bold)%h%x09%Cgreen%d%Creset%x20%s%x20%Cblue(%an)%Creset\"
+  unstage = reset HEAD --
+  logg = log --name-status
+  mylog = log --name-status --author="pzierhoffer"
+  re = rebase --autostash --committer-date-is-author-date
+[user]
+  name = Piotr Zierhoffer
+  email = pzierhoffer@antmicro.com
+[color]
+  ui = auto
+[http]
+  sslVerify=false
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[rerere]
+  enabled = true
+  autoupdate = true
+[push]
+  default = simple

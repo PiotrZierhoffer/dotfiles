@@ -9,6 +9,7 @@ alias grep='grep -I --color=auto'
 alias fgrep='fgrep -I --color=auto'
 alias egrep='egrep -I --color=auto'
 alias df="df -h"
+alias free="free -h"
 alias pss="ps aux | grep -i $1 "
 alias emu='cd ~/AntMicro/emulator'
 alias sl="ls"

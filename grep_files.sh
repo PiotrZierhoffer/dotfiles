@@ -3,8 +3,12 @@ set -e
 set -u
 
 IFS=$'\n'
+WHAT=$1
+shift
+WHERE=${*:-.}
 counter=0
-for entry in `grep -rIn --color=always "$1" .`
+echo $WHAT $WHERE
+for entry in `grep -rHiIn --color=always "$WHAT" $WHERE`
 do
   echo "[$counter] $entry"
 

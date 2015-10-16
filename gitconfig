@@ -23,3 +23,9 @@
   autoupdate = true
 [push]
   default = simple
+[sendemail]
+  from = Piotr Zierhoffer <pzierhoffer@antmicro.com>
+  smtpEncryption = tls
+  smtpServer = smtp.gmail.com
+  smtpUser= pzierhoffer@antmicro.com
+  smtpServerPort = 587

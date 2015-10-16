@@ -7,8 +7,7 @@ WHAT=$1
 shift
 WHERE=${*:-.}
 counter=0
-echo $WHAT $WHERE
-for entry in `grep -rHiIn --color=always "$WHAT" $WHERE`
+for entry in `grep -irHIn --color=always "$WHAT" $WHERE`
 do
   echo "[$counter] $entry"
 
@@ -26,5 +25,5 @@ then
   echo -n "Podaj numer wpisu, który ma zostać otwarty: "
   read number
 
-  vim +${lines[$number]} ${paths[$number]}
+  vim +${lines[$number]} +/$WHAT +?$WHAT  ${paths[$number]}
 fi
